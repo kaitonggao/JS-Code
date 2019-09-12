@@ -101,7 +101,7 @@ if(grade>3) {
     console.log(`${firstName} needs to worry about college :<`)
 }
 
-*/
+
 
 //Ternary Operator --> Cleaner way of writing an if/else statement 
 
@@ -120,4 +120,27 @@ if (height == '22') {
     console.log (`Hey this is a type coercion!`);
 } else {
     console.log (`No type coercion with triple ===`)
+}*/
+
+////functions
+
+function calculateAge(birthYear){
+    return(2019 - birthYear)
+}
+
+//This function calculates Age, if you provide the birthYear.  Then it uses the birth year provided as seen in illustration.
+
+/*functionCall(argument goes here);
+const ageGallo = calculateAge(2002);
+const ageIlsa = calculateAge(2003);
+const ageThami = calculateAge(2004);
+
+//console.log(ageGallo, ageIlsa, ageThami); */
+
+let firstName = 'Brendan'
+function yearsUntilRetire(year, firstName) {
+    let age = calculateAge(year);
+    let retirement = 65 - age;
+
+    console.log(`${firstName} retires in ${retirement}`);
 }
