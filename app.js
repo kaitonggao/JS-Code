@@ -102,6 +102,7 @@ if(grade>3) {
 }
 
 
+//9/12/19 Ternary Operators
 
 //Ternary Operator --> Cleaner way of writing an if/else statement 
 
@@ -124,9 +125,9 @@ if (height == '22') {
 
 ////functions
 
-function calculateAge(birthYear){
+/*function calculateAge(birthYear){
     return(2019 - birthYear)
-}
+}*/
 
 //This function calculates Age, if you provide the birthYear.  Then it uses the birth year provided as seen in illustration.
 
@@ -135,12 +136,63 @@ const ageGallo = calculateAge(2002);
 const ageIlsa = calculateAge(2003);
 const ageThami = calculateAge(2004);
 
-//console.log(ageGallo, ageIlsa, ageThami); */
+//console.log(ageGallo, ageIlsa, ageThami); =
 
 let firstName = 'Brendan'
 function yearsUntilRetire(year, firstName) {
     let age = calculateAge(year);
     let retirement = 65 - age;
-
     console.log(`${firstName} retires in ${retirement}`);
 }
+
+*/
+
+//9/13/19 : Functions Lesson + Arrays.
+
+//function whatDoYouDo(job,firstName){}; Function declaration without definition/XPathExpression.//
+
+//case = situation // return= what happens, sends it.
+//let "function name"//
+//function, write varable type and these will be defined in console.log//
+//switch(x) = different cases of x will produce...//
+
+/*let whatDoYouDo = function(job, firstName){
+    switch(job) { 
+        case 'teacher':
+            return firstName + ' teaches childern';
+        case 'driver':
+            return firstName + ' drives people';    
+        case 'designer':
+            return firstName + ' design things';
+        default: 
+            return firstName + ' is broke and homeless yokes.';
+        }
+}
+
+console.log(whatDoYouDo('teacher', 'Thami'));
+console.log(whatDoYouDo('driver', 'Veda'));
+console.log(whatDoYouDo('designer', 'Kai :>'));
+console.log(whatDoYouDo('default', 'Rob'));
+*/
+
+///******* */Arrays
+
+//Array example:
+
+let name = ['Brian', 'Andrew', 'Winny', 'Kai'] // array list of strings/names
+let numbers = [1,25,6,7,8] //array list of numbers
+let crazyArray = ['string', 203, true];
+
+//how to call an Array: 
+
+// console.log(`Hello ${name[0]}!`) //remember first term in an array is 0!
+// console.log(name.length); //length tells you number of arrays.
+
+//el = element //forEach = lists each element
+
+/* name.forEach(function(el){
+    console.log(el)
+}
+)*/
+
+name.push("Melkadze");
