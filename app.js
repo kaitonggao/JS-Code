@@ -175,13 +175,15 @@ console.log(whatDoYouDo('designer', 'Kai :>'));
 console.log(whatDoYouDo('default', 'Rob'));
 */
 
-///******* */Arrays
+//////****Arrays
 
 //Array example:
 
+/*
+
 let name = ['Brian', 'Andrew', 'Winny', 'Kai'] // array list of strings/names
 let numbers = [1,25,6,7,8] //array list of numbers
-let crazyArray = ['string', 203, true];
+let crazyArray = ['string', 203, true];*/
 
 //how to call an Array: 
 
@@ -195,4 +197,17 @@ let crazyArray = ['string', 203, true];
 }
 )*/
 
-name.push("Melkadze");
+//name.push("Melkadze");
+
+/////***Calling arrays or multiple terms
+
+/*let names = ['Brian', 'Andrew', 'Winny', 'Kai'];
+const namePairs = [names[0] + names [1],
+names[2] + names[3]];
+console.log(namePairs);*/
+
+ /////**** Array Method Filter :  Only contains final paid amounts over $100.
+
+/*const copyOnlyOver100 = finalAmount.filter( finalAmount => finalAmount > 100); //How to filter: first thing before => is all the terms and after ==> is how you want to filter it.
+
+ console.log(copyOnlyOver100);*/
