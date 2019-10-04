@@ -211,3 +211,4 @@ console.log(namePairs);*/
 /*const copyOnlyOver100 = finalAmount.filter( finalAmount => finalAmount > 100); //How to filter: first thing before => is all the terms and after ==> is how you want to filter it.
 
  console.log(copyOnlyOver100);*/
+const copyOnlyOver100 = finalAmount.filter( finalAmount => finalAmount > 100);
