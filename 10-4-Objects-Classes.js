@@ -4,9 +4,10 @@ class Album {
         this.artist = artist;
         this.yearReleased = yearReleased;
     }
-    calculateAge(){
+    calculateAge(){ //this is a method, a function inside a function. To work it use console.log(abbeyRoad.calcAge)
         return (new Date().getFullYear() - this.yearReleased);
     }
+
 }
     /*calculateAge(){
         return (new Date().getFullYear() - this.yearReleased);
