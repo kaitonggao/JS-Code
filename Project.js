@@ -1,7 +1,7 @@
 //abstraction when computer does work. like colors Hexdecimal
 
 class cats {
-    constructor(species, size, colors){
+    constructor(species, markings, colors){
         this.species = species;
         this.markings = markings;
         this.colors = colors;
@@ -11,6 +11,6 @@ class cats {
     }
 }
 
-const tiger = new cats('Tiger', 'stripes', 'orange and black');
+const tiger = new cats('tiger', 'stripes', 'orange and black');
 
 console.log(tiger.classify());
