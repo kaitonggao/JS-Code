@@ -4,11 +4,11 @@
 
 
 //***View */ class for the UI which contains methods
-//this UI has 
+//UI class
+// grab display and shove stuff in. html, new html 
+
 //creates the html for the UI Display -> insert things like age, album, artist those variables.
-
-//clear field method 
-
+//clear field method - insert with empty string 
 //remove something/object 
 
 //controller combines ui and model
