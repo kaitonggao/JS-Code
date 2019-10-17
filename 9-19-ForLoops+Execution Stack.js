@@ -78,7 +78,9 @@ const hero= {
         }
 }
 
-hero.getBirthYear();
+//hero.getBirthYear();
+
+//make a function with your variables
 
 function Hero(alias, powers, age){
     this.alias = alias;
@@ -86,5 +88,8 @@ function Hero(alias, powers, age){
     this.age = age;
 }
 
+// whatever you are stating here will be the new values
+
 const batman = new Hero('Batman', 'Wealthy', 44)
 console.log(batman);
+
