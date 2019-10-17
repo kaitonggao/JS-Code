@@ -2,18 +2,17 @@
 // method is a function inside a function
 // objects enclose functions class is an object
 
-class cats {
-    constructor(species, markings, colors){
-        this.species = species;
+class Cats {
+    constructor(species, markings, colors){ //constructor(userSpecies); 
+        this.species = species; // this.species = userSpecies;
         this.markings = markings;
         this.colors = colors;
+        this.url = url;
     }
     classify(){
         return "A " + this.species + " has " + this.markings + " and is " + this.colors;
     }
 }
-
-
 
 //Instead of a function you use class 
 
@@ -28,71 +27,65 @@ class cats {
 } */
 
 
-// Put UI all the things that students input.banner
-
 class UI {
-  displayCats(e) {
-    if(userCats.value == '') {
-    alert("Please input a Value");
-    } else {
-    let html = ' <div class="display-cats"><div class="display-species">%species%</div><div class="display-markings">%markings%</div><div class="display-colors">%colors%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger"> Remove Avenger  &#9822;  </p></div></div> ';
-    let newHtml = html.replace('%species%', cats.species);
-    newHtml = newHtml.replace('%powers%',  cats.markings);
-    newHtml = newHtml.replace('%name%', cats.colors);
-    display.insertAdjacentHTML('beforeend', newHtml);
-    //console.log('help');
 
-    e.preventDefault();
-    clearValues();
+    displayCats(cats) {
+      if(userCats.value == '') { 
+          alert("Please input a Value");
+      } 
+      
+      else {
+      let html = ' <div class="display-cats"><div class="display-species">%species%</div><div class="display-markings">%markings%</div><div class="display-colors">%colors%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger"> Remove Avenger  &#9822;  </p></div></div> ';
+  
+      let newHtml = html.replace('%species%', cats.species);
+      newHtml = newHtml.replace('%markings%',  cats.narkings);
+      newHtml = newHtml.replace('%colors%', cats.colors);
+      newHtml = newHtml.replace('%url%', cats.url)
+      display.insertAdjacentHTML('beforeend', newHtml);
+      //console.log('help');
+      clearValues();
+      }
+      }
+  }
 
-    
-}
-}
+  
 
 
+//EVENT LISTENER -> takes your form values and defines it as variables you will call in class UI
 
-}
+document.getElementById("form").addEventListener("submit",function(e){
 
-    //push into array
+    //GET CONST
+     const species = document.querySelector('#species'); //gets info from the section which is labeled id="species" . This info is now called userinputSpecies
+     const markings= document.querySelector('#markings');
+     const colors = document.querySelector('#colors');
+     const url= document.querySelector('#image');
+
+     //if something is grey that means that it hasn't been called in your section yet.
+
+     //get const and make a new object category from it.
+     const cats = new Cats(species, markings, colors);
+ 
+     const runUI= new UI(); // runs your UI for your new inputs.
+     console.log(runUI);
+
+     runcode.displayCats(cats);
+     
+     e.preventDefault();
+     
+ 
+ }
+ 
+
+ 
+/*
+ //push into array
   addCats() {
     movies.push(species, markings, color);
 
 }
 
-addCats('tiger', 'stripes','black and orange');
 
-removeAvenger(e){
-    if(e.target.parentElement.classList.contains('remove-avenger')){
-    if(confirm('Are You Sure?')) {
-    e.target.parentElement.parentElement.remove();
-    //console.log(e.target.parentElement);
-    }
-    }
-
-}
-
-//SEPERATE FROM CLASS - EVENT LISTENER
-// you're getting your values and then defining it!
-document.getElementById("form").addEventListerner("submit",function(e){
-   //GET CONST
-    const species = document.querySelector('#species'); //could also getElementById
-    const markings = document.querySelector('markings');
-    const colors = document.querySelector('#colors');
-   
-    //get const and make a new ablum from it.
-    const album = new album(species, markings, colors);
-
-    const ui = new UI();
-    console.log(ui);
-    
-    
-
-
-}
-
-
-
-/*
 //event listener if something happens, then it will make the following functions work.
 
 function eventListeners(){
