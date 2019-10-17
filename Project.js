@@ -27,38 +27,72 @@ class cats {
     }
 } */
 
+
 // Put UI all the things that students input.banner
 
-
 class UI {
-    userInput(cats){
-const species = document.querySelector('#species'); //could also getElementById
-const markings = document.querySelector('markings');
-const colors = document.querySelector('#colors');
-    }
+  displayCats(e) {
+    if(userCats.value == '') {
+    alert("Please input a Value");
+    } else {
+    let html = ' <div class="display-cats"><div class="display-species">%species%</div><div class="display-markings">%markings%</div><div class="display-colors">%colors%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger"> Remove Avenger  &#9822;  </p></div></div> ';
+    let newHtml = html.replace('%species%', cats.species);
+    newHtml = newHtml.replace('%powers%',  cats.markings);
+    newHtml = newHtml.replace('%name%', cats.colors);
+    display.insertAdjacentHTML('beforeend', newHtml);
+    //console.log('help');
+
+    e.preventDefault();
+    clearValues();
+
+    
+}
+}
+
+
 
 }
 
     //push into array
-function addCats() {
+  addCats() {
     movies.push(species, markings, color);
 
 }
 
 addCats('tiger', 'stripes','black and orange');
 
-document.getElementById('form').addEventListerner('submit',function(e){
-    const goes here???
-    also element 
-    and UI?
-    all my fuuctions.
+removeAvenger(e){
+    if(e.target.parentElement.classList.contains('remove-avenger')){
+    if(confirm('Are You Sure?')) {
+    e.target.parentElement.parentElement.remove();
+    //console.log(e.target.parentElement);
+    }
+    }
+
+}
+
+//SEPERATE FROM CLASS - EVENT LISTENER
+// you're getting your values and then defining it!
+document.getElementById("form").addEventListerner("submit",function(e){
+   //GET CONST
+    const species = document.querySelector('#species'); //could also getElementById
+    const markings = document.querySelector('markings');
+    const colors = document.querySelector('#colors');
+   
+    //get const and make a new ablum from it.
+    const album = new album(species, markings, colors);
+
+    const ui = new UI();
+    console.log(ui);
+    
+    
 
 
 }
 
-);
 
 
+/*
 //event listener if something happens, then it will make the following functions work.
 
 function eventListeners(){
@@ -70,55 +104,6 @@ eventListeners();
 
 
 
-function displayAvengerMember(e) {
-    if(userCats.value == '') {
-    alert("Please input a Value");
-    } else {
-    let html = '<div class="display-avenger"><div class="display-alias">%alias%</div><div class="display-powers">%powers%</div><div class="display-name">%name%</div><div class="first-appearance">%years%</div><div class="display-image"><img src=%url% alt=""></div><div class="remove-avenger"><p class="remove-avenger">Remove Avenger &#10006; </p></div></div>';
-
-    let newHtml = html.replace('%alias%', userAlias.value);
-    newHtml = newHtml.replace('%powers%', userPowers.value);
-    newHtml = newHtml.replace('%name%', userFullName.value);
-    newHtml = newHtml.replace('%years%', userFirstAppearance.value);
-    newHtml = newHtml.replace('%url%', userImage.value);
-    display.insertAdjacentHTML('beforeend', newHtml);
-    //console.log('help');
-
-    e.preventDefault();
-    clearValues();
-
-    
-}
-}
 
 //remove avenger 
-
-function removeAvenger(e){
-    if(e.target.parentElement.classList.contains('remove-avenger')){
-    if(confirm('Are You Sure?')) {
-    e.target.parentElement.parentElement.remove();
-    //console.log(e.target.parentElement);
-    }
-    
-}
-
-function init(){
-    userAlias.value = '';
-    userFullName = '';
-    userPowers.value = '';
-    userFirstAppearance.value = '';
-    userImage.value = '';
-}
-
-
-init()
-
-//displayAvengerMember();
-
-
-function clearValues() {
-    document.getElementById("hero-form").reset();
-}
-
-clearValues();
-
+*/
