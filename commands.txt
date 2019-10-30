@@ -1,0 +1,12 @@
+npm init -y -> package.json
+src  -> make your index.html and .js files 
+
+npm i webpack webpack-cli webpack-dev-server html-webpack plugin --save-dev
+-> How you install dev dependecies (package.json)
+
+
+-> after downloading everything make webpack.config.js
+npm run build
+
+live server -> every change is automatically inputed into distribution folder
+-> npm run start
